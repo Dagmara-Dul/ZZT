@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PureJS</title>
+  <script type="text/html" id="home">
+    <h1>Start <%= where %>!</h1>
+  </script>
+  <script type="text/html" id="example1">
+    <h1><%= title %></h1>
+    <% for (let i of title) { %>
+      <span><%= i %></span>
+    <% } %>
+  </script>
+  <script type="text/html" id="example2">
+    <h1><%= title %></h1>
+    <button class="my-button">Click me <%= counter %></button>
+  </script>
+  <script type="text/html" id="404">
+    <h1>404 Not found</h1>
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="#">home</a>
+    <a href="#/ex1">example 1</a>
+    <a href="#/ex2">example 2</a>
+  </nav>
+  <div id="app"></div>
+
+
+  //template
+  <template id="form-sample">
+    <div>
+      <h1 class="title">Zaloguj się</h1>
+      <form id="login-form">
+        <label class="login-form-label">Email
+          <input type="email" autocomplete="off" name="email" value="Type here" class="login-form-input"/>
+        </label>
+        <label class="login-form-label">Password
+          <input type="password" autocomplete="off" name="password" value="Type here" class="login-form-input"/>
+        </label>
+        <button type="submit" class="login-form-button btn">Submit</button>
+      </form>
+    </div>
+  </template>
+
+  <template id="success-page">
+    <div>
+      <span>success</span>
+    </div>
+  </template>
+
+  <script src="./main.js"></script>
+</body>
+</html>

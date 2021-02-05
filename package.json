@@ -1,0 +1,37 @@
+{
+  "name": "zadanie",
+  "version": "1.0.0",
+  "description": "Frontend mini-framework with router and template engine",
+  "main": "app.js",
+  "scripts": {
+    "dev": "webpack serve --open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve",
+    "build": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/jan.horubala/zadanie.git"
+  },
+  "keywords": [
+    "vanillajs",
+    "router",
+    "template"
+  ],
+  "author": "Jan Horubała",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/jan.horubala/zadanie/issues"
+  },
+  "homepage": "https://gitlab.com/jan.horubala/zadanie#readme",
+  "devDependencies": {
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "babel-loader": "^8.2.2"
+  }
+}
