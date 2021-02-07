@@ -55,5 +55,3 @@ const router = () => {
 
 window.addEventListener('hashchange', router);
 window.addEventListener('load', router);
-
-export const obj2 = { ab: "alpha", cb: "bravo"}
