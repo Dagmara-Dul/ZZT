@@ -1,13 +1,34 @@
-import { route, obj2 } from './router';
+import { route } from './router';
+import view1 from '../src/view1.html';
+require('../src/main.css');
 
-import  getClasses  from './getClasses';
+$(document).ready(function () {
+
+$('head').append(view1)
+
+route('/', 'view1', function() {
+  this.formTitle = 'Welcome';
+  this.emailFormLabel = 'Email';
+  this.passwordFormLabel='Password';
+  this.submit='log in';
+  
+
+  this.$on('#email','change', (e)=>{
+    console.log(e.target.value)
+    let emailValue = e.target.value.trim();
+  });
 
 
+  var passwordObj = this.$on('#password','change', (e)=>{
+    console.log(e.target.value)
+    let passwordValue = e.target.value.trim();
+  });
+  
 
-
-
-route('/', 'home', function() {
-  this.where = 'here';
+  this.$on('#login-form','submit', (event)=>{
+    event.preventDefault();
+    this.$refresh();
+  })
 });
 
 route('/ex1', 'example1', function() {
@@ -23,13 +44,10 @@ route('/ex2', 'example2', function() {
   });
 });
 
+route('/ex3', 'example3', function() {
+  this.title1 = 'Formularz';
+});
 
-const obj = { a: "alpha", b: "bravo"}
-const newObj = { ...obj, c: 'charlie'}
-console.log(newObj);
-console.log(obj);
-getClasses();
 
 route('*', '404', function () {});
-
-console.log(obj2);
+});

@@ -16,10 +16,28 @@ module.exports = {
         use: {
           loader:'babel-loader'
         }
+      },
+      {
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            interpolate: true,
+            esModule: true
+          }
+        }
+      },
+      {
+        test:/\.css/,
+        use: [
+          "style-loader",
+          "css-loader"
+        ]
       }
     ]
   },
   devServer: {
     contentBase: './dist'
   }
+
 };
