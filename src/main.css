@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Hind', sans-serif;
+}
+
+#app{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top:20vh;
+}
+
+.login-form-label{
+    display:block;
+}
+
+label {
+    display:flex;
+    justify-content: space-between;
+}

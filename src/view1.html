@@ -2,13 +2,13 @@
     <div>
         <h1 class="title"> <%=formTitle%> </h1>
         <form id="login-form">
-        <label class="login-form-label"><%=emailFormLabel%>
-            <input type="email" autocomplete="off" name="email" value="Type here" class="login-form-input"/>
+        <label for="email" class="login-form-label"><%=emailFormLabel%>
+            <input type="email" autocomplete="off" name="email" placeholder="Type here" class="login-form-input-email" id="email" />
         </label>
-        <label class="login-form-label"><%=passwordFormLabel%>
-            <input type="password" autocomplete="off" name="password" value="Type here" class="login-form-input"/>
+        <label for="password" class="login-form-label"><%=passwordFormLabel%>
+            <input type="password" autocomplete="off" name="password" placeholder="Type here" class="login-form-input" id="password"/>
         </label>
-        <button type="submit" class="login-form-button btn"><%=submit%></button>
+        <button type="submit" class="login-form-button btn" id="submit-button"><%=submit%></button>
         </form>
     </div>
 </script>

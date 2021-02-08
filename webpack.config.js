@@ -1,4 +1,3 @@
-// const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
@@ -27,18 +26,26 @@ module.exports = {
             esModule: true
           }
         }
+      },
+      // {
+      //   test:/\.s[ac]ss$/i,
+      //   use: [
+      //     "style-loader",
+      //     "css-loader",
+      //     "sass-loader"
+      //   ]
+      // },
+      {
+        test:/\.css/,
+        use: [
+          "style-loader",
+          "css-loader"
+        ]
       }
     ]
   },
   devServer: {
     contentBase: './dist'
   }
-  // ,
-  // plugins: [
-  //   new HtmlWebpackPartialsPlugin({
-  //     path: path.join(__dirname, './src/view1.html'),
-  //     location:'head',
-  //     template_filename: ['index.html']
-  //   })  
-  // ]
+
 };
