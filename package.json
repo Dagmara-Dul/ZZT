@@ -26,8 +26,6 @@
   "homepage": "https://gitlab.com/jan.horubala/zadanie#readme",
   "devDependencies": {
     "css-loader": "^5.0.1",
-    "gulp": "^4.0.2",
-    "gulp-file-include": "^2.3.0",
     "html-webpack-partials-plugin": "^0.8.0",
     "node-sass": "^5.0.0",
     "sass": "^1.32.6",
